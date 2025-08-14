@@ -72,14 +72,13 @@ def process_video(video_path, output_dir):
     return saved_face_count
 
 
-# --- Main Processing Loop ---
-# Using the exact folder names from your screenshots.
+
 folders_to_process = {
-    # --- REAL Videos ---
+    # REAL Videos ---
     os.path.join(VIDEO_ROOT, "Deepfakes/original_sequences/actors/c23/videos"): REAL_FACES_PATH,
     os.path.join(VIDEO_ROOT, "Deepfakes/original_sequences/youtube/c23/videos"): REAL_FACES_PATH,
 
-    # --- FAKE Videos ---
+    #FAKE Videos ---
     os.path.join(VIDEO_ROOT, "Deepfakes/manipulated_sequences/DeepFakeDetection/c23/videos"): FAKE_FACES_PATH,
     os.path.join(VIDEO_ROOT, "Deepfakes/manipulated_sequences/Deepfakes/c23/videos"): FAKE_FACES_PATH,
 }
