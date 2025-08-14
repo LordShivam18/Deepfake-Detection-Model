@@ -3,13 +3,10 @@ import os
 from mtcnn import MTCNN
 from tqdm import tqdm
 
-# --- Configuration ---
-# IMPORTANT: Update these paths to match your folder structure
 
-# This should be the path to your folder of downloaded videos
 VIDEO_ROOT = "E:/manipulated_sequences"
 
-# This should point to the folder you just created
+
 OUTPUT_PATH = "../Face-Dataset/preprocessed_faces"
 
 REAL_FACES_PATH = os.path.join(OUTPUT_PATH, "real")
@@ -41,7 +38,7 @@ def process_video(video_path, output_dir):
         if frame is None or frame.size == 0:
             continue
 
-        # Process one frame every FRAME_RATE frames
+        
         if frame_count % FRAME_RATE == 0:
             # --- START OF THE TRY...EXCEPT BLOCK ---
             try:
