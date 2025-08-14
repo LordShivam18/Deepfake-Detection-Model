@@ -1,14 +1,14 @@
-# Web Framework and Server
+
 fastapi
 uvicorn[standard]
 
-# AI / Deep Learning
+
 torch
 torchvision
 transformers
 timm
 
-# Media Processing
+
 opencv-python-headless
 librosa
 mtcnn
