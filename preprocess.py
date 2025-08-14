@@ -13,18 +13,15 @@ REAL_FACES_PATH = os.path.join(OUTPUT_PATH, "real")
 FAKE_FACES_PATH = os.path.join(OUTPUT_PATH, "fake")
 FRAME_RATE = 30 # Process one frame every 30 frames (approx. 1 per second)
 
-# --- Setup ---
-# Initialize the MTCNN face detector
+
 detector = MTCNN()
 
-# Create output directories if they don't exist
+
 os.makedirs(REAL_FACES_PATH, exist_ok=True)
 os.makedirs(FAKE_FACES_PATH, exist_ok=True)
 
 def process_video(video_path, output_dir):
-    """
-    Extracts, detects, and crops faces from a single video file.
-    """
+    
     video_capture = cv2.VideoCapture(video_path)
     frame_count = 0
     saved_face_count = 0
@@ -52,17 +49,16 @@ def process_video(video_path, output_dir):
                     x2, y2 = x1 + width, y1 + height
                     face = frame[y1:y2, x1:x2]
                     
-                    # Construct a unique filename
+                    
                     video_filename = os.path.basename(video_path).split('.')[0]
                     save_path = os.path.join(output_dir, f"{video_filename}_frame{frame_count}.jpg")
                     
-                    # Resize face to a standard size, e.g., 224x224
+                    
                     resized_face = cv2.resize(face, (224, 224))
                     cv2.imwrite(save_path, resized_face)
                     saved_face_count += 1
             except Exception as e:
-                # Catch any error during processing and just continue
-                # This will prevent crashes from corrupted frames.
+                
                 continue
             # --- END OF THE TRY...EXCEPT BLOCK ---
         
