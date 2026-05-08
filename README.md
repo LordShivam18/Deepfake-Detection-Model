@@ -1,4 +1,4 @@
-Deepfake Guardian: Real-Time AI Detection System
+## Deepfake Guardian: Real-Time AI Detection System
 Deepfake Guardian is a full-stack end-to-end solution designed to detect facial manipulations in videos. Using state-of-the-art computer vision and deep learning, the system extracts facial features from video frames and classifies them as authentic (Real) or manipulated (Fake) using a custom-trained Convolutional Neural Network (CNN).
 
 🚀 Features
@@ -25,6 +25,8 @@ Computer Vision: OpenCV
 
 DevOps: Docker, GitHub Actions
 
+
+
 📂 Project Structure
 Plaintext
 deepfake-guardian/
@@ -41,10 +43,9 @@ deepfake-guardian/
     ├── preprocessed_faces/
     │   ├── real/
     │   └── fake/
+    
 ⚙️ Installation & Setup
 1. Clone the Repository
-Bash
-git clone https://github.com/your-username/deepfake-guardian.git
 cd deepfake-guardian
 2. Backend Setup
 Bash
@@ -62,6 +63,7 @@ Bash
 cd ../frontend
 npm install
 npm run dev
+
 📊 Dataset Information
 This project utilizes the FaceForensics++ dataset, specifically focusing on:
 
